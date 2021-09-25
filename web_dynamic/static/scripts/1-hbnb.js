@@ -1,11 +1,15 @@
 $(function () {
-	const listamenities = [];
+	const dictamenities = {};
 	const checkboxes = $('input');
 	for (const box of checkboxes) {
 		box.addEventListener('change', function () {
 			if (box.checked) {
-				listamenities.push($(box).data('id'));
+				dictamenities[$(box).data('id')] = $(box).data('name');
 			} else {
-				delete listamenities[$(box).data('id')];
+				delete dictamenities[$(box).data('id')];
 			}
-			$('DIV.amenities h4').append(listamenities);
+			let listamenities = Object.values(dictamenities);
+			$('DIV.amenities h4').text(listamenities.join(', '));
+		});
+	}
+});
