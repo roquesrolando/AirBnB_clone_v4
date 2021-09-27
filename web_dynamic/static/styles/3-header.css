@@ -15,14 +15,14 @@ header .logo {
 
 
 #api_status {
-          height: 40px;
-          width: 40px;
-          background-color: #cccccc;
-          border-radius: 50%;
-          margin-right: 30px;
-          margin-top: 15px;
+    height: 40px;
+    width: 40px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    margin-right: 30px;
+    margin-top: 15px;
 }
 
 .available {
-    background-color: #ff545f;
+    background-color: #ff545f !important;
 }
